@@ -15,6 +15,7 @@ function App() {
 
   useEffect(() => {
     console.log(colaboradores);
+    console.info("Testando a renderização com o useEffect()")
   }, [colaboradores])
 
 
