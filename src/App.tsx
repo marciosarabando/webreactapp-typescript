@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
 import Banner from './componentes/Banner'
-import Novo from './componentes/Novo';
 import { IColaborador } from './shared/interfaces/IColaborador';
 import { times } from './data/times';
 
@@ -15,14 +14,12 @@ function App() {
   }
 
   useEffect(() => {
-    document.title = colaboradores[colaboradores.length - 1]?.nome
     console.log(colaboradores);
   }, [colaboradores])
 
 
   return (
     <div className="App">
-      <Novo titulo='O Lucca é o neném mais lindo do mundo'></Novo>
       <Banner enderecoImagem='/imagens/banner.png' />
       <Formulario
         times={times.map(time => time.nome)}
